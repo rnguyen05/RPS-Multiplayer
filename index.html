@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors Multiplayer</title>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ceviche+One|Special+Elite|Tauri" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!--Header container-->
+<div class="container">
+        <div id="header-title">Rock Paper Scissors</div>    
+</div>
+<!--Input Name, Player and Game information container-->
+<div class="container">
+    
+        <!--Display form-->
+        <div id="displayForm">
+            <form>
+                <div class="row justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <input type="text" class="form-control" id="playerName" placeholder="Enter Player Name">
+                    </div>
+                    <div class="col-3 col-md-2">
+                        <button type="submit" class="btn btn-sbPlayer btn-warning">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row justify-content-center col-md-12">
+            <!--Player name and game information-->
+            <div id="playerId"></div>
+            <div id="gameInfo"></div>
+        </div>
+</div>
+<!--Player One, Game Results and Player Two container-->
+<div class="container">
+        <div class="row justify-content-center col-md-12">
+
+            <!--Player One Box -->
+            <div id="playerOne" class="btn newBtn col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="playerOneName mb-3 border-bottom">Waiting for Player</div>
+                <div class="row justify-content-center">
+                    <div class="col-4 col-sm-4 col-md-4 rock1" title='Rock'><i class="far fa-2x fa-hand-rock"></i></div>
+                    <div class="col-4 col-sm-4 col-md-4 scissors1" title='Scissors'><i class="far fa-2x fa-hand-scissors"></i></div>
+                    <div class="col-4 col-sm-4 col-md-4 paper1" title='Paper'><i class="far fa-2x fa-hand-paper"></i></div>
+                </div>
+                <div class="col-6 col-md-6 pt-3 playerOneScores">Wins:<span class="wins"></span> | Losses:<span class="losses"></span></div>
+            </div>
+
+            <!--Winner Box-->
+            <div id="winner" class="btn newBtn col-6 col-sm-4 col-md-2  col-lg-2">
+                <div class="winnerName mb-3 border-bottom"></div>
+                <div class="row justify-content-center">
+                    <div class="winner"></div>
+                </div>
+            </div>
+
+            <!--Player Two Box -->
+            <div id="playerTwo" class="btn newBtn col-6 col-sm-4 col-md-3  col-lg-2">
+                <div class="playerTwoName mb-3 border-bottom">Waiting for Player</div>
+                <div class="row justify-content-center">
+                    <div class="col-4 col-sm-4 col-md-4 rock2" title='Rock'><i class="far fa-2x fa-hand-rock"></i></div>
+                    <div class="col-4 col-sm-4 col-md-4 scissors2" title='Scissors'><i class="far fa-2x fa-hand-scissors"></i></div>
+                    <div class="col-4 col-sm-4 col-md-4 paper2" title='Paper'><i class="far fa-2x fa-hand-paper"></i></div>
+                </div>
+                <div class="col-6 col-md-6 pt-3 playerTwoScores">Wins:<span class="wins"></span> | Losses:<span class="losses"></span></div>
+            </div>
+        </div>
+</div>
+<!--Chat container-->
+<div class="container">
+        <div class="row justify-content-center">
+            <div id="chatSession" class="form-control col-11 col-md-8 mb-3 pd-2"></div>
+        </div>
+        <form id="chatForm">
+            <div class="row justify-content-center">
+                <div class="col-8 col-md-6">
+                <input type="text" class="form-control" id="chatText" placeholder="Type here to chat...">
+                </div>
+                <div class="col-3 col-md-2">
+                <button type="submit" class="btn btn-sbChat btn-warning">Submit</button>
+                </div>
+            </div>
+        </form>
+</div>
+
+
+    <script type="text/javascript" src="assets/javascript/main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
